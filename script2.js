@@ -1,10 +1,12 @@
 'use strict';
 
 const flight = 'SLA241';
-const abbas = {
-    name: 'Abbas Gure',
-    passport: 1231412312
+const Abbas = {
+  name :'Abbas',
+  passport:null
+    
 }
+
 
 
 
@@ -23,6 +25,12 @@ const checkIn = function (flightNumber, passenger) {
   }
 };
 
-checkIn(flight,abbas)
-console.log(flight ,typeof flight);console.log(abbas, typeof abbas);
 
+
+const newPassport = (person) =>{
+
+  person.passport = Math.trunc(Math.random()*1000000);
+}
+
+newPassport(Abbas);
+checkIn(flight, Abbas)
